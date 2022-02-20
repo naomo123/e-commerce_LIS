@@ -35,7 +35,7 @@
     								<label style="resize: vertical;" class="control-label"  style="position:relative; top:7px;">Descripción:</label>
     							</div>
     							<div class="col-sm-10">
-									<textarea cols="12" class="form-control" style="resize: vertical;" id="descripcion"  value="<?= isset($descripcion) ? $descripcion : '' ?>" name="descripcion" rows="6"></textarea>
+									<textarea cols="12" class="form-control" style="resize: vertical;" id="descripcion"  name="descripcion" rows="6"><?= isset($descripcion) ? $descripcion : '' ?></textarea>
     								<p class="text-danger"><?= isset($error_log['descripcion_error']) ? $error_log['descripcion_error'] : '' ?></p>
 
     							</div>
