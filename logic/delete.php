@@ -4,7 +4,7 @@
      
     	$productos = simplexml_load_file('../files/productos.xml');
      
-    	//we're are going to create iterator to assign to each user
+    	//we're are going to create iterator to assign to each product
     	$index = 0;
     	$i = 0;
      
