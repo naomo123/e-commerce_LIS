@@ -1,24 +1,24 @@
 <?php
-require_once 'Validation/validate.php';
+require_once '../Validation/validate.php';
 if (isset($_POST)) {
 
     extract($_POST);
-    
+
     $error_log = array();
-    
-        if (!isset($codigo) || isEmpty($codigo))
+
+    if (!isset($codigo) || isEmpty($codigo))
         $error_log["codigo_error"] = "Debes ingresar el codigo del producto";
-        else if (!isLicense($codigo))
+    else if (!isLicense($codigo))
         $error_log["codigo_error"] = "Debe tener un formato PROD#####";
 
-        if (!isset($nombre) || isEmpty($nombre))
+    if (!isset($nombre) || isEmpty($nombre))
         $error_log["nombre_error"] = "Debes ingresar el nombre";
     else if (!isText($nombre))
         $error_log["nombre_error"] = "Debes ingresar solamente letras";
 
     if (!isset($descripcion) || isEmpty($descripcion))
         $error_log["descripcion_error"] = "Debes ingresar una descripcion";
-    
+
 
     if (!isset($precio) || isEmpty($precio))
         $error_log["precio_error"] = "Debes ingresar el precio";
@@ -30,10 +30,8 @@ if (isset($_POST)) {
     else if (!isEntero($existencias))
         $error_log["existencias_error"] = "Debes ingresar una cantidad valida";
 
-        if (!isset($img) || isEmpty($img))
+    if (!isset($img) || isEmpty($img))
         $error_log["img_error"] = "Debes  escoger una imagen";
     else if (!isImage($img))
         $error_log["img_error"] = "Debes ingresar una imagen valida";
-      
-    
 }

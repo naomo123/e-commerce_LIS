@@ -1,34 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <productos>
-  <producto>
-    <codigo>PROD00001</codigo>
-    <nombre>Camiseta de algodón cuello redondo</nombre>
-    <descripcion>Camiseta Mod. 1, elaborada en algodón de 200 grs. cuello redondo decorado, manga corta, costuras en cierres laterales.</descripcion>
-    <img>PROD00013.png</img>
-    <categoria>Promocional</categoria>
-    <precio>2.50</precio>
-    <existencias>502</existencias>
-    <Categoria>Promocional</Categoria>
-  </producto>
-  <producto>
-    <codigo>PROD00002</codigo>
-    <nombre>Camiseta de algodón cuello V</nombre>
-    <descripcion>Camiseta Mod. 2, elaborada en algodón de 200 grs. cuello en V decorado, manga corta, costuras en cierres laterales.</descripcion>
-    <img>PROD00007.jpg</img>
-    <categoria>Textil</categoria>
-    <precio>2.90</precio>
-    <existencias>462</existencias>
-    <Categoria>Textil</Categoria>
-  </producto>
-  <producto>
-    <codigo>PROD00003</codigo>
-    <nombre>Sudadera algodón</nombre>
-    <descripcion>Sudadera para adulto en combinación de materiales algodón y poliéster de 280g/m2, cuello redondo, sin gorro.</descripcion>
-    <img>PROD00003.jpg</img>
-    <categoria>Textil</categoria>
-    <precio>10.0</precio>
-    <existencias>4</existencias>
-  </producto>
+  
+  
+  
   <producto>
     <codigo>PROD00004</codigo>
     <nombre>Sudadera con zipper</nombre>
@@ -147,23 +121,6 @@
     <precio>5.50</precio>
     <existencias>500</existencias>
   </producto>
-  <producto>
-    <codigo>PROD00018</codigo>
-    <nombre>Naomi</nombre>
-    <descripcion>uuu</descripcion>
-    <img>PROD00016.jpg</img>
-    <categoria>Promocional</categoria>
-    <precio>25.50</precio>
-    <existencias>501</existencias>
-    <Categoria>Promocional</Categoria>
-  </producto>
-  <producto>
-    <codigo>PROD00018</codigo>
-    <nombre>Naomi</nombre>
-    <descripcion>jhjkhj</descripcion>
-    <img>PROD00013.png</img>
-    <categoria>Textil</categoria>
-    <precio>21.20</precio>
-    <existencias>2</existencias>
-  </producto>
+  
+  
 </productos>

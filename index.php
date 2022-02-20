@@ -31,7 +31,6 @@
                     {
                       ?>
                       <script>
-
                           $('#addnew').modal('show');
                       </script>
                       <?php  

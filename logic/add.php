@@ -2,11 +2,11 @@
     	session_start();
     	if(isset($_POST['add'])){
 
-			require_once 'Validation/process.php';
+			require_once '../Validation/process.php';
 			$_SESSION['error_log']=$error_log;
 		if(count($error_log)==0){
     		//open xml file
-    		$productos = simplexml_load_file('files/productos.xml');
+    		$productos = simplexml_load_file('../files/productos.xml');
     		$producto = $productos->addChild('producto');
     		$producto->addChild('codigo', $_POST['codigo']);
     		$producto->addChild('nombre', $_POST['nombre']);
@@ -31,11 +31,11 @@
     		// Prettify / Format XML and save
      
     		$_SESSION['message'] = 'Producto añadido satisfactoriamente';
-    		header('location: index.php');
+    		header('location: ../index.php');
 			
 		}
 		else{
-			header('location: index.php');
+    		header('location: ../index.php');
 		}
 		
     	}
@@ -43,6 +43,6 @@
     		$_SESSION['message'] = 'Fill up add form first';
 			
 
-    		header('location: index.php');
+    		header('location: ../index.php');
     	}
     
