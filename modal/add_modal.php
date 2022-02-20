@@ -99,5 +99,5 @@
     	</div>
     </div>
 	<script>
-		$('div[id=edit_<?php echo $producto->codigo; ?>] select[name=categoria]').val('<?= $producto->categoria ?>');
+		$('div[id=add_<?php echo $producto->codigo; ?>] select[name=categoria]').val('<?= $producto->categoria ?>');
 	</script>
