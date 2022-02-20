@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <productos>
-  
-  
-  
   <producto>
     <codigo>PROD00004</codigo>
     <nombre>Sudadera</nombre>
@@ -121,5 +118,22 @@
     <precio>5.50</precio>
     <existencias>500</existencias>
   </producto>
-  
+  <producto>
+    <codigo>PROD00018</codigo>
+    <nombre>Gorra negra</nombre>
+    <descripcion>fea y negra</descripcion>
+    <img>PROD00014.jpg</img>
+    <categoria>Textil</categoria>
+    <precio>52.50</precio>
+    <existencias>52</existencias>
+  </producto>
+  <producto>
+    <codigo>PROD00017</codigo>
+    <nombre>camisa gris aburrida</nombre>
+    <descripcion>aburrida y simple</descripcion>
+    <img>PROD00003.jpg</img>
+    <categoria>Selecciona una categoría</categoria>
+    <precio>800.89</precio>
+    <existencias>501</existencias>
+  </producto>
 </productos>
