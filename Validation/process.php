@@ -29,8 +29,8 @@ if (isset($_POST)) {
     else if (!isEntero($existencias))
         $error_log["existencias_error"] = "Debes ingresar una cantidad valida";
 
-    if (!isset($img) || isEmpty($img))
+    if (!isset($_FILES['img']['name']) || isEmpty($_FILES['img']['name']))
         $error_log["img_error"] = "Debes  escoger una imagen";
-    else if (!isImage($img))
+    else if (!isImage($_FILES['img']['name']))
         $error_log["img_error"] = "Debes ingresar una imagen valida";
 }

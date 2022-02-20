@@ -1,9 +1,10 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
-    <title>admin</title>
+    <title>Administración de productos SuperCool</title>
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
     <script src="bootstrap/jquery/jquery.min.js"></script>
@@ -19,7 +20,6 @@
             <div class="col-xl-10 col-xl-offset-2">
                 <a href="#addnew" class="btn btn-primary" data-toggle="modal"><span class="glyphicon glyphicon-plus"></span> Nuevo producto</a>
                 <?php
-                session_start();
                 extract($_SESSION);
                 include('modal/add_modal.php');
                 if (isset($_SESSION['message'])) {
@@ -38,7 +38,7 @@
                 }
                 session_unset();
                 ?>
-                <div class="table-responsive">
+                <div class="table-responsive" style="margin-bottom: 3em;">
                     <table class="table table-bordered table-striped" style="margin-top:20px;">
                         <thead>
                             <th>Codigo del producto</th>

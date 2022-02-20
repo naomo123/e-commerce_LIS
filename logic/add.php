@@ -14,7 +14,7 @@
 
 			//Recogemos el archivo enviado por el formulario
 
-    		$producto->addChild('img',$_POST['img']);
+    		$producto->addChild('img', $_FILES['img']['name']);
             $producto->addChild('categoria', $_POST['categoria']);
             $producto->addChild('precio', $_POST['precio']);
             $producto->addChild('existencias', $_POST['existencias']);
@@ -26,6 +26,11 @@
     		$dom->formatOutput = true;
     		$dom->loadXML($productos->asXML());
     		$dom->save('../files/productos.xml');
+
+			$uploads_dir = "../img";
+			$tmp_name = $_FILES["img"]["tmp_name"];
+			$name = basename($_FILES["img"]["name"]);
+			move_uploaded_file($tmp_name, "$uploads_dir/$name");
     		// Prettify / Format XML and save
 			
     		$_SESSION['message'] = 'Producto añadido satisfactoriamente';
