@@ -29,12 +29,18 @@
     		$dom->loadXML($productos->asXML());
     		$dom->save('files/productos.xml');
     		// Prettify / Format XML and save
-     
+			
     		$_SESSION['message'] = 'Producto añadido satisfactoriamente';
     		header('location: ../index.php');
 			
 		}
 		else{
+			$_SESSION['codigo'] = $_POST['codigo'];
+			$_SESSION['nombre'] = $_POST['nombre'];
+			$_SESSION['descripcion'] = $_POST['descripcion'];
+			$_SESSION['categoria'] = $_POST['categoria'];
+			$_SESSION['precio'] = $_POST['precio'];
+			$_SESSION['existencias'] = $_POST['existencias'];
     		header('location: ../index.php');
 		}
 		

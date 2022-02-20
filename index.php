@@ -24,8 +24,6 @@
                             <?php echo $_SESSION['message']; ?>
                         </div>
                         <?php
-     
-                        unset($_SESSION['message']);
                     }
                     if(isset($error_log) && count($error_log) !=0 )
                     {
@@ -34,9 +32,8 @@
                           $('#addnew').modal('show');
                       </script>
                       <?php  
-                      unset($_SESSION['error_log']);
                     }
-
+                    session_unset();
                 ?>
                 <table class="table table-bordered table-striped" style="margin-top:20px;">
                     <thead>
