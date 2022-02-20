@@ -27,7 +27,7 @@
     		$dom->preserveWhiteSpace = false;
     		$dom->formatOutput = true;
     		$dom->loadXML($productos->asXML());
-    		$dom->save('../files/productos.xml');
+    		$dom->save('..files/productos.xml');
     		// Prettify / Format XML and save
 			
     		$_SESSION['message'] = 'Producto añadido satisfactoriamente';

@@ -58,7 +58,7 @@
     								<label class="control-label" style="position:relative; top:7px;" >Categoría:</label>
     							</div>
     							<div class="col-sm-10">
-    								<select class="form-control form-select form-select-sm" name="categoria" value="<?= isset($categoria) ? $categoria : '' ?>" aria-label=".form-select-sm example">
+    								<select class="form-control form-select form-select-sm" name="categoria"  aria-label=".form-select-sm example">
     									<option selected>Selecciona una categoría</option>
     									<option value="Textil">Textil</option>
     									<option value="Promocional">Promocional</option>
@@ -98,3 +98,6 @@
     		</div>
     	</div>
     </div>
+	<script>
+		$('div[id=edit_<?php echo $producto->codigo; ?>] select[name=categoria]').val('<?= $producto->categoria ?>');
+	</script>

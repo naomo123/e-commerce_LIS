@@ -136,4 +136,13 @@
     <precio>800.89</precio>
     <existencias>501</existencias>
   </producto>
+  <producto>
+    <codigo>PROD00017</codigo>
+    <nombre>Camisa verde</nombre>
+    <descripcion>verde musgo fea</descripcion>
+    <img>t-shirt.png</img>
+    <categoria>Textil</categoria>
+    <precio>52.25</precio>
+    <existencias>502</existencias>
+  </producto>
 </productos>
