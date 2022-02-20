@@ -127,7 +127,6 @@
     <precio>52.50</precio>
     <existencias>52</existencias>
   </producto>
-  
   <producto>
     <codigo>PROD00017</codigo>
     <nombre>Camisa verde</nombre>
@@ -136,5 +135,14 @@
     <categoria>Textil</categoria>
     <precio>52.25</precio>
     <existencias>502</existencias>
+  </producto>
+  <producto>
+    <codigo>PROD00001</codigo>
+    <nombre>Camiseta de algodon cuello redondo</nombre>
+    <descripcion>Camiseta Mod. 1, elaborada en algodón de 200 grs. cuello redondo decorado, manga corta, costuras en cierres laterales.</descripcion>
+    <img>PROD00001.jpg</img>
+    <categoria>Promocional</categoria>
+    <precio>2.50</precio>
+    <existencias>500</existencias>
   </producto>
 </productos>

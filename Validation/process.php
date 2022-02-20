@@ -19,7 +19,6 @@ if (isset($_POST)) {
     if (!isset($descripcion) || isEmpty($descripcion))
         $error_log["descripcion_error"] = "Debes ingresar una descripcion";
 
-
     if (!isset($precio) || isEmpty($precio))
         $error_log["precio_error"] = "Debes ingresar el precio";
     else if (!isMoney($precio))

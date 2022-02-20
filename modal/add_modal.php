@@ -32,10 +32,10 @@
     						</div>
     						<div class="row form-group">
     							<div class="col-sm-2">
-    								<label style="resize: vertical;" class="control-label"  style="position:relative; top:7px;">Descripción:</label>
+    								<label style="resize: vertical;" class="control-label" style="position:relative; top:7px;">Descripción:</label>
     							</div>
     							<div class="col-sm-10">
-									<textarea cols="12" class="form-control" style="resize: vertical;" id="descripcion"  name="descripcion" rows="6"><?= isset($descripcion) ? $descripcion : '' ?></textarea>
+    								<textarea cols="12" class="form-control" style="resize: vertical;" id="descripcion" name="descripcion" rows="6"><?= isset($descripcion) ? $descripcion : '' ?></textarea>
     								<p class="text-danger"><?= isset($error_log['descripcion_error']) ? $error_log['descripcion_error'] : '' ?></p>
 
     							</div>
@@ -46,20 +46,19 @@
 
 
     							<div class="col-sm-2">
-    								<label class="input-group-text" for="inputGroupFile01" >Imagen del producto:</label>
+    								<label class="input-group-text" for="inputGroupFile01">Imagen del producto:</label>
     							</div>
 
-    							<input class="col-sm-10" id="inputGroupFile01" type="file" id="img" value="<?= isset($img) ? $img : '' ?>"  name="img">
+    							<input class="col-sm-10" id="inputGroupFile01" type="file" id="img" value="<?= isset($img) ? $img : '' ?>" name="img">
     							<p class="text-danger"><?= isset($error_log['img_error']) ? $error_log['img_error'] : '' ?></p>
 
     						</div>
     						<div class="row form-group">
     							<div class="col-sm-2">
-    								<label class="control-label" style="position:relative; top:7px;" >Categoría:</label>
+    								<label class="control-label" style="position:relative; top:7px;">Categoría:</label>
     							</div>
-    							<div class="col-sm-10">
-    								<select class="form-control form-select form-select-sm" name="categoria"  aria-label=".form-select-sm example">
-    									<option selected>Selecciona una categoría</option>
+    							<div class="col-sm-10 add">
+    								<select class="form-control form-select form-select-sm" name="categoria" aria-label=".form-select-sm example">
     									<option value="Textil">Textil</option>
     									<option value="Promocional">Promocional</option>
     								</select>
@@ -70,11 +69,11 @@
     						<div class="row form-group">
     							<div class="col-sm-2">
 
-    								<label class="control-label"    style="position:relative; top:7px;">Precio:</label>
+    								<label class="control-label" style="position:relative; top:7px;">Precio:</label>
     							</div>
     							<div class="col-sm-10">
 
-    								<input type="text" class="form-control"value="<?= isset($precio) ? $precio : '' ?>" name="precio">
+    								<input type="text" class="form-control" value="<?= isset($precio) ? $precio : '' ?>" name="precio">
     								<p class="text-danger"><?= isset($error_log['precio_error']) ? $error_log['precio_error'] : '' ?></p>
     							</div>
     						</div>
@@ -98,6 +97,12 @@
     		</div>
     	</div>
     </div>
-	<script>
-		$('div[id=add_<?php echo $producto->codigo; ?>] select[name=categoria]').val('<?= $producto->categoria ?>');
-	</script>
+    <?php
+	if (isset($categoria)) {
+	?>
+    	<script>
+    		$('.add select[name=categoria]').val("<?= $categoria ?>");
+    	</script>
+    <?php
+	}
+	?>

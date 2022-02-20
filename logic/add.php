@@ -13,8 +13,6 @@
     		$producto->addChild('descripcion', $_POST['descripcion']);
 
 			//Recogemos el archivo enviado por el formulario
-			
-			
 
     		$producto->addChild('img',$_POST['img']);
             $producto->addChild('categoria', $_POST['categoria']);
@@ -27,7 +25,7 @@
     		$dom->preserveWhiteSpace = false;
     		$dom->formatOutput = true;
     		$dom->loadXML($productos->asXML());
-    		$dom->save('..files/productos.xml');
+    		$dom->save('../files/productos.xml');
     		// Prettify / Format XML and save
 			
     		$_SESSION['message'] = 'Producto añadido satisfactoriamente';
