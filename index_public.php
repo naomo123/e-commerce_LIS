@@ -27,21 +27,8 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 </head>
 <!-- body -->
-
+<?php include_once 'logic/display_lists.php' ?>
 <body class="main-layout">
-    <?php
-    $products = simplexml_load_file('files/productos.xml');
-
-    function existsRandom($number, $array)
-    {
-        $length = count($array);
-        for ($i = 0; $i < $length; $i++) {
-            if ($array[$i] == $number)
-                return true;
-        }
-        return false;
-    }
-    ?>
     <!-- Modal -->
     <div class="modal fade" id="modalDetails" tabindex="-1" role="dialog" aria-labelledby="modalDetails" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -131,14 +118,6 @@
                     </div>
                 </div>
                 <?php
-                $length = count($products);
-                $numbers = array();
-                for ($i = 0; $i < 3; $i++) {
-                    do {
-                        $rand = rand(0, $length - 1);
-                    } while (existsRandom($rand, $numbers));
-                    $numbers[$i] = $rand;
-                }
                 foreach ($numbers as $key => $value) {
                 ?>
                     <div class="carousel-item">
@@ -192,7 +171,7 @@
                             <figure><img src="img/<?= $product->img ?>" alt="img" /></figure>
                             <h3>$<strong class="price_text"><?= number_format((float)$product->precio, $decimals = 2) ?></strong></h3>
                             <h4><?= $product->nombre ?></h4>
-                            <?=(int)$product->existencias == 0 ? '<h5 class="text-danger">Producto no disponible</h5>' : '' ?>
+                            <?= (int)$product->existencias == 0 ? '<h5 class="text-danger">Producto no disponible</h5>' : '' ?>
                         </div>
                     </div>
                 <?php
@@ -227,14 +206,6 @@
             </ol>
             <div class="carousel-inner">
                 <?php
-                $filtered = array();
-                foreach ($products->producto as $product) {
-                    if ($product->existencias != 0)
-                        $filtered[] = $product;
-                }
-                usort($filtered, function ($a, $b) {
-                    return (float)$a->precio - (float)$b->precio;
-                });
                 for ($i = 0; $i < 3; $i++) {
                 ?>
                     <div class="carousel-item <?= $i == 0 ? "active" : "" ?>">
@@ -373,8 +344,7 @@
             $(".product, .productBtn").on('click', function() {
                 let id = $(this).attr('data-id');
                 product = products.find(p => p.codigo == id);
-                if (product.existencias == 0)
-                {
+                if (product.existencias == 0) {
                     Swal.fire('Producto sin existencias', '', 'error');
                     return;
                 }
