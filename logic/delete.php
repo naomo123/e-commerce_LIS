@@ -19,7 +19,7 @@
     	unset($productos->producto[$index]);
     	file_put_contents('../files/productos.xml', $productos->asXML());
      
-    	$_SESSION['message'] = 'Member deleted successfully';
+    	$_SESSION['message'] = 'Producto eliminado satisfactoriamente';
 		header('location: ../index.php');
      
     ?>
